@@ -16,6 +16,10 @@
 		8F5C3482203D03340002AA95 /* instagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C3481203D03340002AA95 /* instagramTests.swift */; };
 		8F5C348D203D03340002AA95 /* instagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C348C203D03340002AA95 /* instagramUITests.swift */; };
 		8FD867E3203D0617006416DC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD867E2203D0617006416DC /* LoginViewController.swift */; };
+		8FE2A3662042137700E62B26 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE2A3652042137700E62B26 /* PhotoViewController.swift */; };
+		8FE2A368204225ED00E62B26 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE2A367204225ED00E62B26 /* Post.swift */; };
+		8FE2A36A20422DD600E62B26 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE2A36920422DD600E62B26 /* PostViewController.swift */; };
+		8FE2A36C204237F000E62B26 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE2A36B204237F000E62B26 /* PostCell.swift */; };
 		BC2E3390DDAF5CE55106C942 /* Pods_instagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34DDC1B8CBA8746C7EB90EA3 /* Pods_instagramTests.framework */; };
 		BD08589554764BBFD4679E72 /* Pods_instagramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D6CD8910FB0CFD6AF772DB /* Pods_instagramUITests.framework */; };
 /* End PBXBuildFile section */
@@ -59,6 +63,10 @@
 		8F5C348C203D03340002AA95 /* instagramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instagramUITests.swift; sourceTree = "<group>"; };
 		8F5C348E203D03340002AA95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FD867E2203D0617006416DC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8FE2A3652042137700E62B26 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		8FE2A367204225ED00E62B26 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		8FE2A36920422DD600E62B26 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		8FE2A36B204237F000E62B26 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		B1D6CD8910FB0CFD6AF772DB /* Pods_instagramUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagramUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D0C1859D7A155C2965B8D1 /* Pods-instagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagramTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-instagramTests/Pods-instagramTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +141,10 @@
 				8F5C3475203D03340002AA95 /* LaunchScreen.storyboard */,
 				8F5C3478203D03340002AA95 /* Info.plist */,
 				8FD867E2203D0617006416DC /* LoginViewController.swift */,
+				8FE2A3652042137700E62B26 /* PhotoViewController.swift */,
+				8FE2A367204225ED00E62B26 /* Post.swift */,
+				8FE2A36920422DD600E62B26 /* PostViewController.swift */,
+				8FE2A36B204237F000E62B26 /* PostCell.swift */,
 			);
 			path = instagram;
 			sourceTree = "<group>";
@@ -463,9 +475,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FE2A36C204237F000E62B26 /* PostCell.swift in Sources */,
+				8FE2A36A20422DD600E62B26 /* PostViewController.swift in Sources */,
 				8FD867E3203D0617006416DC /* LoginViewController.swift in Sources */,
+				8FE2A3662042137700E62B26 /* PhotoViewController.swift in Sources */,
 				8F5C346F203D03340002AA95 /* ViewController.swift in Sources */,
 				8F5C346D203D03340002AA95 /* AppDelegate.swift in Sources */,
+				8FE2A368204225ED00E62B26 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
