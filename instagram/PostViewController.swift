@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import ParseUI
 
 class PostViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -28,21 +29,35 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         postTableView.dataSource = self
         postTableView.delegate = self
+        postTableView.rowHeight = UITableViewAutomaticDimension
+        postTableView.estimatedRowHeight = 200
         // Do any additional setup after loading the view.
         fetchData()
+        postTableView.reloadData()
         
+        // Initialize a UIRefreshControl
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), for: UIControlEvents.valueChanged)
+        postTableView.insertSubview(refreshControl, at: 0)
     }
-
+    
+    @objc func refreshControlAction(_ refreshControl: UIRefreshControl) {
+        fetchData()
+        self.postTableView.reloadData()
+        refreshControl.endRefreshing()
+    }
+    
     func fetchData() {
         // construct PFQuery
         let query = Post.query() as! PFQuery
-        query.order(byDescending: "createdAt")
+        query.addDescendingOrder("_created_at")
         query.limit = 20
         
         // fetch data asynchronously
         query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
             if let posts = posts {
                 self.posts = posts
+                self.postTableView.reloadData()
             } else {
                 if error != nil {
                     print(error?.localizedDescription)
@@ -65,6 +80,10 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = postTableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
         let post = posts[indexPath.row] as PFObject!
         cell.captionField.text = post!["caption"] as! String
+        cell.postImage.file = post!["media"] as! PFFile
+        cell.postImage.loadInBackground()
+    
+        
 //        if let user = message["user"] as? PFUser {
 //            cell.usernameField.text = user.username
 //        } else {

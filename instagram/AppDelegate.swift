@@ -45,6 +45,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // TODO: Load and show the login view controller
             self.logOut()
         }
+        
+        // check if user is logged in.
+        if PFUser.current() != nil {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            // view controller currently being set in Storyboard as default will be overridden
+            window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "postViewController")
+        }
         return true
     }
     
