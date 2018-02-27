@@ -96,22 +96,22 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xbj-HW-5Dl" customClass="PFImageView">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xbj-HW-5Dl" customClass="PFImageView">
                                                     <rect key="frame" x="25" y="42" width="325" height="163.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="163.5" id="Pd9-KH-11M"/>
+                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="180" id="95p-zB-kgU"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="CZI-54-rgT" firstAttribute="top" secondItem="izT-hU-FFB" secondAttribute="top" constant="10" id="7E7-te-ho4"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="xbj-HW-5Dl" secondAttribute="trailing" constant="10" id="7yr-sb-8l1"/>
-                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="xbj-HW-5Dl" secondAttribute="bottom" constant="10" id="AHz-I2-tu7"/>
-                                                <constraint firstItem="xbj-HW-5Dl" firstAttribute="top" secondItem="CZI-54-rgT" secondAttribute="bottom" constant="10" id="AMy-vk-3Sa"/>
-                                                <constraint firstItem="xbj-HW-5Dl" firstAttribute="top" secondItem="CZI-54-rgT" secondAttribute="bottom" constant="10" id="bnd-y0-L0Q"/>
-                                                <constraint firstItem="xbj-HW-5Dl" firstAttribute="leading" secondItem="izT-hU-FFB" secondAttribute="leadingMargin" constant="10" id="ofS-dX-N4G"/>
-                                                <constraint firstItem="CZI-54-rgT" firstAttribute="leading" secondItem="izT-hU-FFB" secondAttribute="leading" constant="10" id="pMN-A0-YNE"/>
-                                                <constraint firstAttribute="trailing" secondItem="CZI-54-rgT" secondAttribute="trailing" constant="10" id="zPO-by-0Fs"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="xbj-HW-5Dl" secondAttribute="trailing" constant="10" id="4oe-kv-OPH"/>
+                                                <constraint firstItem="CZI-54-rgT" firstAttribute="top" secondItem="izT-hU-FFB" secondAttribute="top" constant="10" id="LaI-Hk-Yh5"/>
+                                                <constraint firstItem="CZI-54-rgT" firstAttribute="leading" secondItem="izT-hU-FFB" secondAttribute="leading" constant="10" id="Wgy-0r-YXI"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="xbj-HW-5Dl" secondAttribute="bottom" constant="30.5" id="b5f-1O-eMD"/>
+                                                <constraint firstItem="xbj-HW-5Dl" firstAttribute="top" secondItem="CZI-54-rgT" secondAttribute="bottom" constant="10" id="dM0-c2-Wr8"/>
+                                                <constraint firstItem="xbj-HW-5Dl" firstAttribute="top" secondItem="CZI-54-rgT" secondAttribute="bottom" constant="10.5" id="kHr-SJ-mwG"/>
+                                                <constraint firstAttribute="trailing" secondItem="CZI-54-rgT" secondAttribute="trailing" constant="10" id="vf3-yW-Deh"/>
+                                                <constraint firstItem="xbj-HW-5Dl" firstAttribute="leading" secondItem="izT-hU-FFB" secondAttribute="leadingMargin" constant="10" id="zfA-ua-8eq"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -164,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fXC-Hx-X4D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1439" y="132"/>
+            <point key="canvasLocation" x="1457" y="133"/>
         </scene>
     </scenes>
 </document>
